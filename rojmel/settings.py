@@ -3,27 +3,21 @@ from pathlib import Path
 from datetime import timedelta
 import dj_database_url
 
-# -------------------------
-# Base directory
-# -------------------------
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # -------------------------
 # Security
 # -------------------------
-SECRET_KEY = os.environ.get("SECRET_KEY", "dev-secret-key")  # fallback for local
+SECRET_KEY = os.environ.get("SECRET_KEY", "dev-secret-key") # fallback for local
 
 DEBUG = os.environ.get("DEBUG", "True") == "True"
 
-ALLOWED_HOSTS = os.environ.get(
-    "ALLOWED_HOSTS", "localhost,127.0.0.1,rojmel-backend.onrender.com"
-).split(",")
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")
 
 # -------------------------
 # Installed apps
 # -------------------------
 INSTALLED_APPS = [
-    # Django
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -47,7 +41,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # static files
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # serve static files
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -56,20 +50,18 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# -------------------------
-# Email backend (console for dev)
-# -------------------------
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-# -------------------------
-# CORS settings
-# -------------------------
 CORS_ALLOW_ALL_ORIGINS = False
 CORS_ALLOWED_ORIGINS = [
     "https://rojmel-frontend-oaiyoohwf-savaliyayug505-gmailcoms-projects.vercel.app",
     "http://localhost:3000",
 ]
-CORS_ALLOW_CREDENTIALS = True
+
+# Crucial for allowing cross-origin POST/PUT/DELETE requests
+CSRF_TRUSTED_ORIGINS = [
+    "https://rojmel-frontend-oaiyoohwf-savaliyayug505-gmailcoms-projects.vercel.app",
+]
 
 # -------------------------
 # REST Framework / JWT
@@ -119,8 +111,7 @@ WSGI_APPLICATION = 'rojmel.wsgi.application'
 # -------------------------
 DATABASES = {
     "default": dj_database_url.config(
-        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
-        conn_max_age=600
+        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}", conn_max_age=600
     )
 }
 
