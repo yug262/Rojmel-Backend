@@ -12,7 +12,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "dev-secret-key") # fallback for local
 
 DEBUG = os.environ.get("DEBUG", "True") == "True"
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "localhost,127.0.0.1,rojmel-backend.onrender.com,rojmel-backend-uiin.onrender.com, https://rojmel-frontend-pd7d6gax1-savaliyayug505-gmailcoms-projects.vercel.app/").split(",")
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "localhost,127.0.0.1,rojmel-backend.onrender.com,rojmel-backend-uiin.onrender.com, https://rojmel-frontend-lh0195fj9-savaliyayug505-gmailcoms-projects.vercel.app/").split(",")
 
 # -------------------------
 # Installed apps
@@ -148,6 +148,7 @@ MEDIA_ROOT = BASE_DIR / "media"
 # Default primary key
 # -------------------------
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 
 
