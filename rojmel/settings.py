@@ -52,8 +52,11 @@ MIDDLEWARE = [
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-CORS_ALLOW_ALL_ORIGINS = True
-CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOWED_ORIGINS = [
+    "https://rojmel-frontend-oaiyoohwf-savaliyayug505-gmailcoms-projects.vercel.app/",
+    "http://localhost:3000",
+]
 
 # -------------------------
 # REST Framework / JWT
@@ -139,5 +142,6 @@ MEDIA_ROOT = BASE_DIR / "media"
 # Default primary key
 # -------------------------
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 
