@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # -------------------------
 # Security
 # -------------------------
-SECRET_KEY = os.environ.get("SECRET_KEY", "dev-secret-key")  # fallback for local
+SECRET_KEY = os.environ.get("SECRET_KEY", "dev-secret-key") # fallback for local
 
 DEBUG = os.environ.get("DEBUG", "True") == "True"
 
@@ -44,9 +44,9 @@ INSTALLED_APPS = [
 # Middleware
 # -------------------------
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',  # must be at the very top
+    'corsheaders.middleware.CorsMiddleware', # must be at the very top
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # serve static files
+    'whitenoise.middleware.WhiteNoiseMiddleware', # serve static files
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -61,16 +61,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # CORS / CSRF
 # -------------------------
 
-# ⚠️ While testing, allow everything.
-# For production, set this to False and only use CORS_ALLOWED_ORIGINS.
-CORS_ALLOW_ALL_ORIGINS = True  
-
-CORS_ALLOWED_ORIGINS = [
-    "https://rojmel-frontend-oaiyoohwf-savaliyayug505-gmailcoms-projects.vercel.app",
-    "https://rojmel-frontend-r5veisir9-savaliyayug505-gmailcoms-projects.vercel.app",
-    "https://rojmel-frontend-lh0195fj9-savaliyayug505-gmailcoms-projects.vercel.app",
-    "http://localhost:3000",
-]
+# Set this to False for production for better security
+CORS_ALLOW_ALL_ORIGINS = True
 
 CSRF_TRUSTED_ORIGINS = [
     "https://rojmel-frontend-oaiyoohwf-savaliyayug505-gmailcoms-projects.vercel.app",
