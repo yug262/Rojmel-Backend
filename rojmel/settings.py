@@ -12,7 +12,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "dev-secret-key") # fallback for local
 
 DEBUG = os.environ.get("DEBUG", "True") == "True"
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",") or [
+ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
     "rojmel-backend.onrender.com",
@@ -154,3 +154,4 @@ MEDIA_ROOT = BASE_DIR / "media"
 # Default primary key
 # -------------------------
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
