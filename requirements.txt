@@ -16,7 +16,7 @@ psycopg2-binary==2.9.9
 whitenoise==6.7.0
 
 # Optional: for image/file uploads
-Pillow==10.3.0
+Pillow==10.2.0
 
 # Data analysis
 pandas==2.1.1
@@ -25,3 +25,4 @@ cython==0.29.40
 
 # Deployment
 gunicorn==22.0.0
+
