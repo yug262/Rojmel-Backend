@@ -11,6 +11,32 @@ django-cors-headers==4.4.0
 # Database config + PostgreSQL
 dj-database-url==2.2.0
 psycopg2-binary==2.9.9
+# Core Django
+Django==5.0.6
+
+# REST framework + JWT
+djangorestframework==3.15.2
+djangorestframework-simplejwt==5.3.1
+
+# CORS
+django-cors-headers==4.4.0
+
+# Database config + PostgreSQL
+dj-database-url==2.2.0
+psycopg2-binary==2.9.9
+
+# Static files (Render)
+whitenoise==6.7.0
+
+# Image/file uploads
+Pillow==10.3.0
+
+# Data analysis (if needed)
+pandas==2.1.1
+numpy==1.27.5
+
+# Deployment
+gunicorn==22.0.0
 
 # Static files
 whitenoise==6.7.0
@@ -25,4 +51,5 @@ cython==0.29.40
 
 # Deployment
 gunicorn==22.0.0
+
 
