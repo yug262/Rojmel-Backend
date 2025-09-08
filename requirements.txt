@@ -23,7 +23,7 @@ fastapi==0.115.14
 Flask==3.1.0
 flask-cors==5.0.1
 fonttools==4.57.0
-gunicorn==20.2.0
+gunicorn
 h11==0.14.0
 httpcore==1.0.7
 httpx==0.28.1
@@ -85,4 +85,5 @@ websocket-client==1.8.0
 Werkzeug==3.1.3
 wheel==0.45.1
 wsproto==1.2.0
+
 
