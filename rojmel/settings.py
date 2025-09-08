@@ -55,6 +55,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 CORS_ALLOW_ALL_ORIGINS = False
 CORS_ALLOWED_ORIGINS = [
     "https://rojmel-frontend-oaiyoohwf-savaliyayug505-gmailcoms-projects.vercel.app",
+    "https://rojmel-frontend-r5veisir9-savaliyayug505-gmailcoms-projects.vercel.app/"
     "http://localhost:3000",
 ]
 
@@ -147,5 +148,6 @@ MEDIA_ROOT = BASE_DIR / "media"
 # Default primary key
 # -------------------------
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 
